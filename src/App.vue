@@ -1,18 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div>
+          <b-tabs content-class="mt-3" fill>
+              <b-tab title="Cities" active>
+                  <CitiesTable></CitiesTable>
+              </b-tab>
+              <b-tab title="Weather of cities">
+                  <WeatherTable></WeatherTable>
+              </b-tab>
+          </b-tabs>
+      </div>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import CitiesTable from "./components/CitiesTable";
+import WeatherTable from "./components/WeatherTable";
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    CitiesTable,
+    WeatherTable
+
+  },
+
 }
 </script>
 
